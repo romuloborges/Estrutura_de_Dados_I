@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(){
-	
+
 	// Declaração de variáveis
 	float altura, peso;
 	float imc;
@@ -11,13 +11,14 @@ int main(){
 	printf( "Insira a sua altura em metros: " );
 	scanf( "%f", &altura );
 	// Limpeza de buffer
-	fflush( stdin );
-	
+	setbuf( stdin, NULL );
+
+
 	// Entrada do peso
 	printf( "Insira o seu peso em KG: " );
 	scanf( "%f", &peso );
 	// Limpeza de buffer
-	fflush( stdin );
+	setbuf( stdin, NULL );
 
 	// Cálculo do IMC
 	imc = peso / ( altura * altura );
@@ -35,7 +36,7 @@ int main(){
 		printf( "Obesidade grau II\n" );
 	else
 		printf( "Obesidade grau III\n" );
-	
+
 
 	return 0;
 
